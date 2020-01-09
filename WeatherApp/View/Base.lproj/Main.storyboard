@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KZC-bI-w9e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WeatherTableViewCell" rowHeight="139" id="Y1s-Bh-Ldi" customClass="WeatherTableViewCell" customModule="WeatherApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="139"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Y1s-Bh-Ldi" id="ruu-22-YxV">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="138.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qU3-at-Gio">
+                                            <rect key="frame" x="142" y="21" width="252" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-pi-gNa">
+                                            <rect key="frame" x="17" y="21" width="103" height="81"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius ">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwG-xy-Iwz">
+                                            <rect key="frame" x="142" y="76" width="252" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="26" id="P0S-mE-bpe"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="252" id="P6h-cd-f0u"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="FwG-xy-Iwz" firstAttribute="trailing" secondItem="qU3-at-Gio" secondAttribute="trailing" id="DWQ-pf-uji"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="FwG-xy-Iwz" secondAttribute="bottom" constant="26" id="FcT-ah-R2r"/>
+                                        <constraint firstItem="FwG-xy-Iwz" firstAttribute="leading" secondItem="qU3-at-Gio" secondAttribute="leading" id="Kty-lU-EEC"/>
+                                        <constraint firstItem="FwG-xy-Iwz" firstAttribute="leading" secondItem="6Pe-pi-gNa" secondAttribute="trailing" constant="22" id="LlO-ZQ-chW"/>
+                                        <constraint firstItem="FwG-xy-Iwz" firstAttribute="trailing" secondItem="ruu-22-YxV" secondAttribute="trailingMargin" id="QG8-1z-vGb"/>
+                                        <constraint firstItem="6Pe-pi-gNa" firstAttribute="top" secondItem="qU3-at-Gio" secondAttribute="top" id="RRZ-Gx-lpd"/>
+                                        <constraint firstItem="FwG-xy-Iwz" firstAttribute="bottom" secondItem="6Pe-pi-gNa" secondAttribute="bottom" id="snk-IT-x6q"/>
+                                        <constraint firstItem="6Pe-pi-gNa" firstAttribute="top" secondItem="ruu-22-YxV" secondAttribute="topMargin" constant="10" id="twn-zM-y5X"/>
+                                        <constraint firstItem="FwG-xy-Iwz" firstAttribute="top" secondItem="qU3-at-Gio" secondAttribute="bottom" constant="27" id="v9Q-M4-Nhb"/>
+                                        <constraint firstItem="6Pe-pi-gNa" firstAttribute="leading" secondItem="ruu-22-YxV" secondAttribute="leadingMargin" constant="-3" id="vNK-4s-oD0"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="forecaseImage" destination="6Pe-pi-gNa" id="IGV-4k-6g6"/>
+                                    <outlet property="forecastDay" destination="FwG-xy-Iwz" id="Ivz-6e-4ea"/>
+                                    <outlet property="forecastTemp" destination="qU3-at-Gio" id="XtH-FQ-EjT"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BYZ-38-t0r" id="skB-jQ-CDw"/>
+                            <outlet property="delegate" destination="BYZ-38-t0r" id="FB6-fj-Rwl"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="weatherTableView" destination="KZC-bI-w9e" id="IbJ-LW-LB1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100.00000000000001" y="52.901785714285715"/>
+        </scene>
+    </scenes>
+</document>
